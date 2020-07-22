@@ -7,10 +7,10 @@ import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  currentLang: 'ar' | 'en';
+  currentLang: 'ar' | 'en' = 'ar';
 
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
+    translate.setDefaultLang('ar');
     translate.onLangChange.subscribe((event: LangChangeEvent) => {
       this.currentLang = event.lang as 'ar' | 'en';
     });
