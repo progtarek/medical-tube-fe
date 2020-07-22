@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient): any {
@@ -27,6 +28,7 @@ export function HttpLoaderFactory(http: HttpClient): any {
         deps: [HttpClient],
       },
     }),
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
